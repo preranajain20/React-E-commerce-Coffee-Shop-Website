@@ -12,6 +12,7 @@ import { navData } from "../index";
 const Nav = styled.section`
   position: sticky;
   top: 0;
+  z-index: 10;
 `;
 const NavbarSection = styled.nav`
   background-color: ${({ theme }) => theme.colors.darkGray};

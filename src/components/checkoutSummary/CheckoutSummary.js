@@ -45,7 +45,6 @@ const ContinueShopping = styled.span`
 `;
 
 const CheckoutSummary = (props) => {
-  // const initialValue = 0;
   const itemTotals = props.checkoutList.reduce(
     (accumulator, currValue) =>
       accumulator + +(currValue.price * currValue.quantity),

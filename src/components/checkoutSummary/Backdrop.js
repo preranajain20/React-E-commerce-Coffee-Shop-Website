@@ -4,7 +4,7 @@ const CheckoutSummaryBackdrop = styled.section`
   min-width: 100vw;
   min-height: 100vh;
   background-color: #c2bfbf78;
-  z-index: 10;
+  z-index: 11;
   position: fixed;
   top: 0;
   left: 0;

@@ -53,13 +53,14 @@ const SummaryItem = ({
   setCheckoutList,
   id,
 }) => {
+  let newQuantity;
+  if (quantity) newQuantity = quantity;
+  if (quantity === "") newQuantity = 1;
   const removeItem = (id) => {
-    let currentCheckoutList = [...checkoutList];
     const itemToRemove = checkoutList.filter((item, index) => {
       return item.id !== id;
     });
     setCheckoutList(itemToRemove);
-    console.log(id, itemToRemove);
   };
 
   return (

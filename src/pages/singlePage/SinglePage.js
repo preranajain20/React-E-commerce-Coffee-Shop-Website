@@ -136,17 +136,14 @@ const SinglePage = (props) => {
   const [productDetails, setProductDetails] = useState({
     blendName,
     singleImg,
+    quantity: 1,
     price,
     grams: 250,
     grind: "Filter",
-    quantity: 1,
-    // purchaseOption: "single purchase",
   });
 
   const addItemToCheckout = () => {
     const currentCheckoutList = [...props.checkoutList];
-    console.log(currentCheckoutList);
-
     const coffeeAlreadyChosen = currentCheckoutList.find((item) => {
       return (
         item.blendName === productDetails.blendName &&
@@ -188,14 +185,28 @@ const SinglePage = (props) => {
   const setGrind = (grind) => {
     setProductDetails({ ...productDetails, grind });
   };
-  const setQuantity = (e) => {
-    if (productDetails.quantity >= 1) {
-      setProductDetails({
-        ...productDetails,
-        quantity: e.target.value,
-      });
-    }
+  const setQnt = (quantity = "") => {
+    setProductDetails({ ...productDetails, quantity });
   };
+  // const remQnt = () => {
+  //   setProductDetails({ ...productDetails });
+  // };
+  // const setQuantity = (e) => {
+  //   if (
+  //     productDetails.quantity === "" ||
+  //     productDetails.quantity.length === 0
+  //   ) {
+  //     setProductDetails({
+  //       ...productDetails,
+  //     });
+  //   }
+  //   if (productDetails.quantity >= 1) {
+  //     setProductDetails({
+  //       ...productDetails,
+  //       quantity: e.target.value,
+  //     });
+  //   }
+  // };
 
   const [stickyClass, setStickyClass] = useState(false);
   const stickyImgToggle = () => {
@@ -291,10 +302,18 @@ const SinglePage = (props) => {
                 <form>
                   <QuantityForm
                     type="number"
-                    value={productDetails.quantity}
+                    // value={productDetails.quantity}
                     min="1"
+                    defaultValue="1"
                     onChange={(e) => {
-                      setQuantity(e);
+                      let val = e.target.value;
+                      if (val === "") {
+                        setQnt(1);
+                        val = "";
+                      }
+                      if (val && val !== "") {
+                        setQnt(val);
+                      }
                     }}
                   />
                 </form>

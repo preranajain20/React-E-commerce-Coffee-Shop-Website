@@ -26,13 +26,25 @@ const CTAsocials = (props) => {
         message on social media.
       </p>
       <SocialLinks>
-        <a href="https://www.instagram.com/two14coffeeco/" target="_blank">
+        <a
+          href="https://www.instagram.com/two14coffeeco/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaInstagram />
         </a>
-        <a href="https://www.tiktok.com/@two14coffeeco" target="_blank">
+        <a
+          href="https://www.tiktok.com/@two14coffeeco"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SiTiktok />
         </a>
-        <a href="https://www.facebook.com/Two14CoffeeCo/" target="_blank">
+        <a
+          href="https://www.facebook.com/Two14CoffeeCo/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaFacebookSquare />
         </a>
       </SocialLinks>

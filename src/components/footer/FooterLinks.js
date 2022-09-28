@@ -46,7 +46,7 @@ const FooterLinks = () => {
         {footerLinksData.map((link, index) => {
           const { title, linkList } = link;
           return (
-            <FooterList>
+            <FooterList key={index}>
               <h3>{title}</h3>
 
               <ul key={index}>

@@ -3,14 +3,14 @@ import styled from "styled-components";
 const CheckoutSummaryContainer = styled.article.attrs((props) => ({
   className: props.className,
 }))`
-  width: 60vw;
+  width: 85vw;
   height: 100%;
   background: ${({ theme }) => theme.colors.white};
 
   position: fixed;
   top: 0;
 
-  z-index: 10;
+  z-index: 11;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;

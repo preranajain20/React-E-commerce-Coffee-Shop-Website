@@ -7,9 +7,10 @@ const CheckoutItemContainer = styled.div`
   width: 100%;
 
   gap: 2rem;
-  margin-bottom: 2rem; ;
+  margin-bottom: 2rem;
 `;
 const CheckoutImgContainer = styled.div`
+  position: relative;
   span {
     position: absolute;
     top: 0;

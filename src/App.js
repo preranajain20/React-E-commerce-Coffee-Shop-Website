@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, SinglePage, CoffeeProducts, AboutUs, Checkout } from "./pages";
 
@@ -9,13 +9,14 @@ import {
   CheckoutSummary,
   SideNav,
 } from "./components";
-//UI
+
 import { Theme, GlobalStyle } from "./UI";
+
 function App() {
-  const [coffeeList, setCoffeList] = useState(coffeeBlendsData);
+  const coffeeList = coffeeBlendsData;
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutList, setCheckoutList] = useState([]);
-  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const openCheckoutSummary = () => {
     setCheckingOut(true);
   };
