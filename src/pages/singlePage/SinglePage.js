@@ -95,35 +95,21 @@ const Selections = styled.div`
 `;
 const QuantityForm = styled.input`
   padding: 0.5rem;
+  width: 100%;
 `;
 const FormContainer = styled.div`
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 1rem;
-
   div {
     color: ${({ theme }) => theme.colors.secondaryGreen};
     font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 600;
+    width: 50%;
     font-family: ${({ theme }) => theme.fonts[3]};
   }
 `;
-// const RadioFormContainer = styled.form`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 1rem;
-//   margin-bottom: 2rem;
-//   div {
-//     font-size: ${({ theme }) => theme.fontSizes.xsmall};
-//     display: flex;
-//     align-items: flex-start;
-
-//     input {
-//       margin-right: 0.5rem;
-//     }
-//   }
-// `;
 
 const SinglePage = (props) => {
   const { id } = useParams();
