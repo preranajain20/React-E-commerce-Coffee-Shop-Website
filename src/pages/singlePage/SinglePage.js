@@ -302,7 +302,7 @@ const SinglePage = (props) => {
                 <form>
                   <QuantityForm
                     type="number"
-                    // value={productDetails.quantity}
+                   
                     min="1"
                     defaultValue="1"
                     onChange={(e) => {
