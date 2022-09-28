@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, SinglePage, CoffeeProducts, AboutUs, Checkout } from "./pages";
 
@@ -14,8 +14,10 @@ import { Theme, GlobalStyle } from "./UI";
 
 function App() {
   const coffeeList = coffeeBlendsData;
+  const checkoutListData =
+    JSON.parse(localStorage.getItem("checkoutList")) || [];
   const [checkingOut, setCheckingOut] = useState(false);
-  const [checkoutList, setCheckoutList] = useState([]);
+  const [checkoutList, setCheckoutList] = useState(checkoutListData);
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const openCheckoutSummary = () => {
     setCheckingOut(true);
@@ -29,7 +31,9 @@ function App() {
   const closeSideNav = () => {
     setIsSideNavOpen(false);
   };
-
+  useEffect(() => {
+    localStorage.setItem("checkoutList", JSON.stringify(checkoutList));
+  }, [checkoutList]);
   return (
     <>
       <Theme>
