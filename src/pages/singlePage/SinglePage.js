@@ -188,9 +188,7 @@ const SinglePage = (props) => {
   const setQnt = (quantity = "") => {
     setProductDetails({ ...productDetails, quantity });
   };
-  // const remQnt = () => {
-  //   setProductDetails({ ...productDetails });
-  // };
+
   // const setQuantity = (e) => {
   //   if (
   //     productDetails.quantity === "" ||
@@ -302,7 +300,6 @@ const SinglePage = (props) => {
                 <form>
                   <QuantityForm
                     type="number"
-                   
                     min="1"
                     defaultValue="1"
                     onChange={(e) => {
