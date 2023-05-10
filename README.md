@@ -1,5 +1,5 @@
-#React E-commerce Coffee Shop Website ☕
-###Description: An e-commerce website for the Two 14 coffee shop
+# React E-commerce Coffee Shop Website ☕
+### Description: An e-commerce website for the Two 14 coffee shop
 🔗 https://two14coffee.netlify.app/
 Github: https://github.com/Tirelo-Mputle/two14-coffee-portfolio-project
 
