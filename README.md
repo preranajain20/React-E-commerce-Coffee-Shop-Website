@@ -1,3 +1,2 @@
-#### IN ACTION
+#Two 14 coffee shop website (clone)
 
-[Portfolio](https://gatsby-strapi-portfolio-project.netlify.app/)
