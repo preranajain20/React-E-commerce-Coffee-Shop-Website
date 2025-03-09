@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import Header from "../header/Header";
-import Logo, { LogoGreen } from "../../UI/Logo";
+import Logo, { LogoGreen } from '../assets/images/logo.png';
 import { StyledNavLinks } from "../../UI";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsSearch, BsPerson } from "react-icons/bs";
